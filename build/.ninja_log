@@ -1,0 +1,4 @@
+# ninja log v5
+1	241	1723632718767305463	CMakeFiles/window_test.dir/src/main.cpp.o	487c9daa28060419
+1	158	1723635713731797619	CMakeFiles/window_test.dir/src/glad.c.o	e8c22823599156e7
+158	231	1723635713803799177	window_test	7f747b762a9c24f9

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/mazbrew/Documents/cpp/window/build",
+  "command": "/usr/bin/g++ -I/home/mazbrew/Documents/cpp/window/include/glad -g -o CMakeFiles/window_test.dir/src/main.cpp.o -c /home/mazbrew/Documents/cpp/window/src/main.cpp",
+  "file": "/home/mazbrew/Documents/cpp/window/src/main.cpp"
+},
+{
+  "directory": "/home/mazbrew/Documents/cpp/window/build",
+  "command": "/usr/bin/gcc -I/home/mazbrew/Documents/cpp/window/include/glad -g -o CMakeFiles/window_test.dir/src/glad.c.o -c /home/mazbrew/Documents/cpp/window/src/glad.c",
+  "file": "/home/mazbrew/Documents/cpp/window/src/glad.c"
+}
+]
