@@ -1,4 +1,0 @@
-/home/mazbrew/Documents/cpp/window/build/CMakeFiles/libraries.dir
-/home/mazbrew/Documents/cpp/window/build/CMakeFiles/window_test.dir
-/home/mazbrew/Documents/cpp/window/build/CMakeFiles/edit_cache.dir
-/home/mazbrew/Documents/cpp/window/build/CMakeFiles/rebuild_cache.dir
