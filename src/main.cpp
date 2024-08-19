@@ -1,37 +1,43 @@
-#include <iostream>
 #include "glad.h"
 #include <GLFW/glfw3.h>
 
-int main(int, char **)
-{
-    GLFWwindow *window;
+void viewportResizeCallback(GLFWwindow *window, int width, int height);
 
-    if (!glfwInit())
-    {
-        return -1;
-    }
+int main(){
+    glfwInit();
 
-    window = glfwCreateWindow(200, 200, "WINDOW", NULL, NULL);
-    glfwMakeContextCurrent(window);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
+    GLFWwindow *window = glfwCreateWindow(1366, 768, "test", NULL, NULL);
+
+    if(window == NULL){
         glfwTerminate();
         return -1;
     }
 
-    glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
+    glfwMakeContextCurrent(window);
 
-    while (!glfwWindowShouldClose(window))
-    {
-        glfwPollEvents();
+    if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
+        glfwTerminate();
+        return -1;
+    }
 
+    glfwSetFramebufferSizeCallback(window, viewportResizeCallback);
+
+    while(!glfwWindowShouldClose(window)){
+        glClearColor(1.0f, 0.5f, 0.2f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
+        glfwPollEvents();
     }
 
     glfwTerminate();
-
     return 0;
+}
+
+void viewportResizeCallback(GLFWwindow *window, int width, int height){
+    glViewport(0,0, width,height);
 }
